@@ -23,26 +23,16 @@ public class Main {
                 scanner.nextLine();
 
                 switch (choice) {
-                    case 1:
-                        userView.createUser();
-                        break;
-                    case 2:
-                        loggedInUser = userView.login();
-                        break;
-                    case 3:
-                        userView.removeUser();
-                        break;
-                    case 4:
-                        userView.listAllUsers();
-                        break;
-                    case 5:
-                        menuView.showMenus();
-                        break;
-                    case 6:
+                    case 1 -> userView.createUser();
+                    case 2 -> loggedInUser = userView.login();
+                    case 3 -> userView.removeUser();
+                    case 4 -> userView.listAllUsers();
+                    case 5 -> menuView.showMenus();
+                    case 6 -> {
                         System.out.println("시스템을 종료합니다.");
                         return;
-                    default:
-                        System.out.println("잘못된 입력입니다.");
+                    }
+                    default -> System.out.println("잘못된 입력입니다.");
                 }
             } else {
                 System.out.println("1.메뉴선택 2.내정보수정 3.로그아웃 4.주문내역보기 5.주문삭제");
@@ -50,23 +40,15 @@ public class Main {
                 scanner.nextLine();
 
                 switch (choice) {
-                    case 1:
-                        menuView.addOrderToUser(loggedInUser);
-                        break;
-                    case 2:
-                        userView.updateUserInfo(loggedInUser);
-                        break;
-                    case 3:
+                    case 1 -> menuView.addOrderToUser(loggedInUser);
+                    case 2 -> userView.updateUserInfo(loggedInUser);
+                    case 3 -> {
                         loggedInUser = null;
                         System.out.println("-----로그아웃 되었습니다.-----");
                         System.out.println("-------------------------");
-                        break;
-                    case 4:
-                        userView.viewUserDetails(loggedInUser.getEmail());
-                        break;
-                    case 5:
-                        userView.removeOrder(loggedInUser);
-                        break;
+                    }
+                    case 4 -> userView.viewUserDetails(loggedInUser.getEmail());
+                    case 5 -> userView.removeOrder(loggedInUser);
                 }
             }
         }

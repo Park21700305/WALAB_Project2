@@ -25,64 +25,18 @@
 ### 데이터 저장 포맷
 이 프로젝트에서는 JSON (JavaScript Object Notation) 포맷을 사용하여 사용자 데이터와 메뉴 정보 등을 파일에 저장하고 관리
 - readData(menuData.json) 미리 저장하여 읽기 위한 메뉴 데이터
-  - [
-    {
-    "menuName": "홈런볼",
-    "price": 1500
-    },
-    {
-    "menuName": "라볶이",
-    "price": 3000
-    },
-    {
-    "menuName": "핫도그",
-    "price": 2500
-    },
-    {
-    "menuName": "라면",
-    "price": 2500
-    },
-    {
-    "menuName": "콜라",
-    "price": 1500
-    },
-    {
-    "menuName": "제로콜라",
-    "price": 1500
-    },
-    {
-    "menuName": "환타",
-    "price": 1500
-    },
-    {
-    "menuName": "갈비탕",
-    "price": 9500
-    },
-    {
-    "menuName": "1시간",
-    "price": 1000
-    },
-    {
-    "menuName": "2시간",
-    "price": 1800
-    },
-    {
-    "menuName": "3시간",
-    "price": 2500
-    },
-    {
-    "menuName": "5시간",
-    "price": 4000
-    },
-    {
-    "menuName": "10시간",
-    "price": 7000
-    }
-    ]
+   <img width="349" alt="스크린샷 2024-01-02 오후 9 41 19" src="https://github.com/Park21700305/WALAB_Project2/assets/93187535/c02a4e19-4bfa-44ae-9a7a-fcb0cdfdcee8">
+- writeData(userInfoData.json) 기능7번 -> 회원가입한 유저정보를 저장
+  <img width="428" alt="스크린샷 2024-01-02 오후 9 39 59" src="https://github.com/Park21700305/WALAB_Project2/assets/93187535/42adcc77-408e-4a3a-94a7-9d0b24b1da18">
 
-
+  
 ## 스크린샷
+<img width="722" alt="스크린샷 2024-01-02 오후 9 29 05" src="https://github.com/Park21700305/WALAB_Project2/assets/93187535/4be0b51f-24b3-4670-9e48-63c1f12bca88">
+<img width="551" alt="스크린샷 2024-01-02 오후 9 29 18" src="https://github.com/Park21700305/WALAB_Project2/assets/93187535/e86b6b48-55b7-4b3e-b060-0791be667013">
+<img width="513" alt="스크린샷 2024-01-02 오후 9 29 30" src="https://github.com/Park21700305/WALAB_Project2/assets/93187535/6b77638c-83e8-4e44-b37e-a8959ea2e233">
+<img width="528" alt="스크린샷 2024-01-02 오후 9 29 39" src="https://github.com/Park21700305/WALAB_Project2/assets/93187535/ca22fcc9-4646-49d0-beee-aa33c1e783b4">
+<img width="526" alt="스크린샷 2024-01-02 오후 9 29 50" src="https://github.com/Park21700305/WALAB_Project2/assets/93187535/51efad1c-9339-46bd-a3c6-4a72a4691e4d">
+<img width="580" alt="스크린샷 2024-01-02 오후 9 29 57" src="https://github.com/Park21700305/WALAB_Project2/assets/93187535/b543f7f8-4745-4ebe-b88f-8c664cc23645">
 
-화면 캡처는 프로젝트의 주요 기능을 보여줍니다. 이 이미지는 사용자 인터페이스 및 주요 기능을 시각적으로 보여주는 데 도움을 줍니다.
 
 *Lombok, javax.persistence, json-simple 의존성 라이브러리를 포함하여 프로젝트를 빌드해야함*

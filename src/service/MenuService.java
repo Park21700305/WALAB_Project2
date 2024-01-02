@@ -3,13 +3,41 @@ package service;
 import domain.Menu;
 import domain.MenuOrder;
 import domain.User;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
+import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class MenuService {
-    private final List<Menu> menus = Arrays.asList(Menu.values());
+    private List<Menu> menus;
+
+    public MenuService() {
+        menus = new ArrayList<>();
+        loadMenusFromJson("src/fileIO/menuData.json");
+    }
+
+    private void loadMenusFromJson(String filePath) {
+        JSONParser parser = new JSONParser();
+
+        try (FileReader reader = new FileReader(filePath)) {
+            JSONArray menuArray = (JSONArray) parser.parse(reader);
+
+            for (Object o : menuArray) {
+                JSONObject menuObject = (JSONObject) o;
+                String menuName = (String) menuObject.get("menuName");
+                Long priceLong = (Long) menuObject.get("price");
+                int price = priceLong.intValue();
+
+                menus.add(new Menu(menuName, price));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void addMenuOrderToUser(User user, Menu menu, int quantity) {
         MenuOrder menuOrder = new MenuOrder(menu, quantity);
@@ -18,7 +46,7 @@ public class MenuService {
         int totalPrice = user.getTotalPrice() + menu.getPrice() * quantity;
         user.setTotalPrice(totalPrice);
 
-        if (menu.name().startsWith("TIME")) {
+        if (menu.getMenuName().startsWith("TIME")) {
             String timeString = menu.getMenuName();
 
             int additionalTime = Integer.parseInt(timeString.replaceAll("[^0-9]", "")) * quantity;
@@ -29,6 +57,6 @@ public class MenuService {
     }
 
     public List<Menu> getMenus() {
-        return new ArrayList<>(menus);
+        return menus;
     }
 }

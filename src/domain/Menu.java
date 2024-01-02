@@ -1,27 +1,15 @@
 package domain;
 
-public enum Menu {
-    MENU1("떡볶이", 3000),
-    MENU2("라면", 2500),
-    MENU3("콜라", 1000),
-    MENU4("소떡소떡", 2000),
-    TIME1("1시간", 1000),
-    TIME2("2시간", 1800),
-    TIME3("3시간", 2500);
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-    private final String menuName;
-    private final Integer price;
-
-    Menu(String menuName, Integer price) {
-        this.menuName = menuName;
-        this.price = price;
-    }
-
-    public String getMenuName() {
-        return menuName;
-    }
-
-    public Integer getPrice() {
-        return price;
-    }
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Menu {
+    private String menuName;
+    private int price;
 }

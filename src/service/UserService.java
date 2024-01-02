@@ -70,7 +70,7 @@ public class UserService {
         user.setTotalPrice(Math.max(user.getTotalPrice() - priceReduction, 0)); // 가격은 음수가 되지 않도록
 
         // 만약 시간 관련 메뉴인 경우, 시간도 업데이트
-        if (menu.name().startsWith("TIME")) {
+        if (menu.getMenuName().startsWith("TIME")) {
             String timeString = menu.getMenuName();
             int timeReduction = Integer.parseInt(timeString.replaceAll("[^0-9]", "")) * quantity;
             user.setChargingTime(Math.max(user.getChargingTime() - timeReduction, 0)); // 시간은 음수가 되지 않도록

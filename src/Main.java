@@ -18,7 +18,7 @@ public class Main {
 
         while (true) {
             if (loggedInUser == null) {
-                System.out.println("1.회원가입 2.로그인 3.회원삭제 4.회원목록 5.메뉴보기 6.시스템종료");
+                System.out.println("1.회원가입 2.로그인 3.회원삭제 4.회원목록 5.메뉴보기 6.회원목록파일읽기 7.회원목록파일저장 8.시스템종료");
                 int choice = scanner.nextInt();
                 scanner.nextLine();
 
@@ -28,7 +28,9 @@ public class Main {
                     case 3 -> userView.removeUser();
                     case 4 -> userView.listAllUsers();
                     case 5 -> menuView.showMenus();
-                    case 6 -> {
+//                    case 6 -> userView.readUserListFile();
+//                    case 7 -> userView.writeUserListFile();
+                    case 7 -> {
                         System.out.println("시스템을 종료합니다.");
                         return;
                     }

@@ -24,6 +24,62 @@
 
 ### 데이터 저장 포맷
 이 프로젝트에서는 JSON (JavaScript Object Notation) 포맷을 사용하여 사용자 데이터와 메뉴 정보 등을 파일에 저장하고 관리
+- readData(menuData.json) 미리 저장하여 읽기 위한 메뉴 데이터
+  - [
+    {
+    "menuName": "홈런볼",
+    "price": 1500
+    },
+    {
+    "menuName": "라볶이",
+    "price": 3000
+    },
+    {
+    "menuName": "핫도그",
+    "price": 2500
+    },
+    {
+    "menuName": "라면",
+    "price": 2500
+    },
+    {
+    "menuName": "콜라",
+    "price": 1500
+    },
+    {
+    "menuName": "제로콜라",
+    "price": 1500
+    },
+    {
+    "menuName": "환타",
+    "price": 1500
+    },
+    {
+    "menuName": "갈비탕",
+    "price": 9500
+    },
+    {
+    "menuName": "1시간",
+    "price": 1000
+    },
+    {
+    "menuName": "2시간",
+    "price": 1800
+    },
+    {
+    "menuName": "3시간",
+    "price": 2500
+    },
+    {
+    "menuName": "5시간",
+    "price": 4000
+    },
+    {
+    "menuName": "10시간",
+    "price": 7000
+    }
+    ]
+
 
 ## 스크린샷
 

@@ -29,4 +29,4 @@
 
 화면 캡처는 프로젝트의 주요 기능을 보여줍니다. 이 이미지는 사용자 인터페이스 및 주요 기능을 시각적으로 보여주는 데 도움을 줍니다.
 
-Lombok, javax.persistence, json-simple 의존성 라이브러리를 포함하여 프로젝트를 빌드해야함
+*Lombok, javax.persistence, json-simple 의존성 라이브러리를 포함하여 프로젝트를 빌드해야함*

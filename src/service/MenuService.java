@@ -10,6 +10,8 @@ import org.json.simple.parser.JSONParser;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MenuService {
     private List<Menu> menus;
@@ -42,11 +44,13 @@ public class MenuService {
     public void addMenuOrderToUser(User user, Menu menu, int quantity) {
         MenuOrder menuOrder = new MenuOrder(menu, quantity);
         user.getMenuOrders().add(menuOrder);
+        Pattern pattern = Pattern.compile("^[0-9]");
+        Matcher matcher = pattern.matcher(menu.getMenuName());
 
         int totalPrice = user.getTotalPrice() + menu.getPrice() * quantity;
         user.setTotalPrice(totalPrice);
 
-        if (menu.getMenuName().startsWith("TIME")) {
+        if (matcher.find()) {
             String timeString = menu.getMenuName();
 
             int additionalTime = Integer.parseInt(timeString.replaceAll("[^0-9]", "")) * quantity;

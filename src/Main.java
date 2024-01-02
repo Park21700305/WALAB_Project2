@@ -28,9 +28,8 @@ public class Main {
                     case 3 -> userView.removeUser();
                     case 4 -> userView.listAllUsers();
                     case 5 -> menuView.showMenus();
-//                    case 6 -> userView.readUserListFile();
-//                    case 7 -> userView.writeUserListFile();
-                    case 7 -> {
+                    case 7 -> userService.saveUsersToJson("src/fileIO/userInfoData.json");
+                    case 8 -> {
                         System.out.println("시스템을 종료합니다.");
                         return;
                     }

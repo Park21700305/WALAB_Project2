@@ -25,8 +25,10 @@
 ### 데이터 저장 포맷
 이 프로젝트에서는 JSON (JavaScript Object Notation) 포맷을 사용하여 사용자 데이터와 메뉴 정보 등을 파일에 저장하고 관리
 - readData(menuData.json) 미리 저장하여 읽기 위한 메뉴 데이터
-   <img width="349" alt="스크린샷 2024-01-02 오후 9 41 19" src="https://github.com/Park21700305/WALAB_Project2/assets/93187535/c02a4e19-4bfa-44ae-9a7a-fcb0cdfdcee8">
+
+  <img width="349" alt="스크린샷 2024-01-02 오후 9 41 19" src="https://github.com/Park21700305/WALAB_Project2/assets/93187535/c02a4e19-4bfa-44ae-9a7a-fcb0cdfdcee8">
 - writeData(userInfoData.json) 기능7번 -> 회원가입한 유저정보를 저장
+
   <img width="428" alt="스크린샷 2024-01-02 오후 9 39 59" src="https://github.com/Park21700305/WALAB_Project2/assets/93187535/42adcc77-408e-4a3a-94a7-9d0b24b1da18">
 
   
